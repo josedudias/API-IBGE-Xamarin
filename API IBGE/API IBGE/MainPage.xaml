@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="API_IBGE.MainPage">
+
+    <StackLayout>
+        <ListView x:Name="lvwDados" >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Title}" TextColor="Black" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <StackLayout Orientation="Horizontal">
+            <Button x:Name="btnAdd"
+                BackgroundColor="Khaki"
+                Clicked="OnAdd"
+                Text="Incluir" />
+            <Button  x:Name="btnUpdate"
+                BackgroundColor="MediumPurple"
+                Clicked="OnUpdate"
+                HorizontalOptions="CenterAndExpand"
+                Text="Atualizar" />
+            <Button  x:Name="btnDelete"
+                BackgroundColor="Crimson"
+                Clicked="OnDelete"
+                Text="Deletar" />
+        </StackLayout>
+
+    </StackLayout>
+
+</ContentPage>
